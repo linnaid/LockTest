@@ -30,6 +30,7 @@ TEST_F(HashLockTest, BasicTest) {
   setKey(bucket_.get(), 1, 2);
   {
     int data = getValue(bucket_.get(), 2);
+    //printf("%d\n",data);
     ASSERT_EQ(data, 11);
     ASSERT_TRUE(bucket_->table[1].head == nullptr) << "Pointer is not NULL";
   }
